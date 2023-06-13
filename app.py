@@ -7,9 +7,11 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
+import openai
 
 def main():
     load_dotenv()
+    print(os.getenv("OPENAI_API_KEY"))
     st.set_page_config(page_title="ask your pdf")
     st.header("ask your PDF")
 
